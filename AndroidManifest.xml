@@ -23,6 +23,11 @@
                 <action android:name="android.app.NotificationManager.ACTION_NOTIFY" />
             </intent-filter>
         </receiver>
+                <receiver android:name=".CopyNotificationBackground" android:exported="true" android:enabled="true"> 
+            <intent-filter> 
+                <action android:name="com.cyanogenmod.cmparts.activities.NOTIFICATION_BACKGROUND_CHANGE"></action> 
+            </intent-filter> 
+        </receiver>
         <receiver android:name=".intents.BootReceiver" android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -49,6 +54,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.InputSearchKeyActivity"
+            android:label="@string/input_search_key_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.cyanogenmod.cmparts.SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.InputDoubleTapHomeActivity"
             android:label="@string/input_search_key_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

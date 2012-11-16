@@ -94,6 +94,7 @@
     <string-array name="entries_status_bar_battery">
         <item>Ikon (Standard)</item>
         <item>Procent</item>
+        <item>statuslinjen</item>
         <item>Skjult</item>
     </string-array>
 
